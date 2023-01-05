@@ -30,24 +30,24 @@ public class CPersona {
 		return spersona.listarPersonas();
 	}
 	
-	@PostMapping("/persona")
-	@ResponseBody
-	public String crearPersona(@RequestBody Persona persona){
-		spersona.crearPersona(persona);
-		return "La persona fue creada correctamente!!";
-	}
+	//@PostMapping("/persona")
+	//@ResponseBody
+	//public String crearPersona(@RequestBody Persona persona){
+	//	spersona.crearPersona(persona);
+	//	return "La persona fue creada correctamente!!";
+	//}
 	
-	@DeleteMapping("/persona/{id}")
-	public String borrarPersona(@PathVariable Long id){
-		spersona.borrarPersona(id);
-		return "La persona fue eliminada correctamente!!";
-	}
+	//@DeleteMapping("/persona/{id}")
+	//public String borrarPersona(@PathVariable Long id){
+	//	spersona.borrarPersona(id);
+	//	return "La persona fue eliminada correctamente!!";
+	//}
 	
-	@GetMapping("/persona/{id}")
-	@ResponseBody
-	public Persona buscarPersonaPorId(@PathVariable Long id){
-		return spersona.buscarPersonaPorId(id);
-	}
+	//@GetMapping("/persona/{id}")
+	//@ResponseBody
+	//public Persona buscarPersonaPorId(@PathVariable Long id){
+	//	return spersona.buscarPersonaPorId(id);
+	//}
 	
 	@PutMapping("/persona")
 	public String modificarPersona(@RequestBody Persona persona){
