@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController //anotacion del spring o controlador
-//@RequestMapping("experiencia") //localhost:8080/experiencia
 @CrossOrigin(origins = "http://localhost:4200") //con que se va a cruzar, o sea, angular
 public class CExperiencias {
 	
