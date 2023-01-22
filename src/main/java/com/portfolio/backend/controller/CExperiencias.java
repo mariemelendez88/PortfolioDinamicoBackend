@@ -23,33 +23,32 @@ public class CExperiencias {
 	
 	@GetMapping("/experiencias")
 	@ResponseBody
-	public List<Experiencias> listarExperiencias(){
-		return sexperiencias.listarExperiencias();
+	public List<Experiencias> listarItems(){
+		return sexperiencias.listarItems();
 	}
 	
 	@PostMapping("/experiencias")
 	@ResponseBody
-	public String crearExperiencia(@RequestBody Experiencias experiencia){
-		sexperiencias.crearExperiencia(experiencia);
+	public String crearItem(@RequestBody Experiencias experiencia){
+		sexperiencias.crearItem(experiencia);
 		return "La experiencia fue creada correctamente!!";
 	}
 	
 	@DeleteMapping("/experiencias/{id}")
 	public String borrarExperiencia(@PathVariable Long id){
-		sexperiencias.borrarExperiencia(id);
+		sexperiencias.borrarItem(id);
 		return "La experiencia fue eliminada correctamente!!";
 	}
 	
 	@GetMapping("/experiencias/{id}")
 	@ResponseBody
-	public Experiencias buscarExperienciaPorId(@PathVariable Long id){
-		return sexperiencias.buscarExperienciaPorId(id);
+	public Experiencias cargarItem(@PathVariable Long id){
+		return sexperiencias.cargarItem(id);
 	}
 	
 	@PutMapping("/experiencias")
-	public String modificarExperiencia(@RequestBody Experiencias experiencia){
-		sexperiencias.modificarExperiencia(experiencia);
+	public String modificarItem(@RequestBody Experiencias experiencia){
+		sexperiencias.modificarItem(experiencia);
 		return "La experiencia fue modificada correctamente!!";
 	}
-	
 }

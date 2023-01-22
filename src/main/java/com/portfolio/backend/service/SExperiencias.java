@@ -11,23 +11,23 @@ public class SExperiencias {
 	@Autowired
 	RExperiencias rexperiencias;
 	
-	public void crearExperiencia(Experiencias experiencia){
-		rexperiencias.save(experiencia);
-	}
-	
-	public void borrarExperiencia(Long id){
-		rexperiencias.deleteById(id);
-	}
-	
-	public List<Experiencias> listarExperiencias(){
+	public List<Experiencias> listarItems(){
 		return rexperiencias.findAll();
 	}
 	
-	public Experiencias buscarExperienciaPorId(Long id){
+	public Experiencias cargarItem(Long id){
 		return rexperiencias.findById(id).orElse(null);
 	}
 	
-	public void modificarExperiencia(Experiencias experiencia){
+	public void crearItem(Experiencias experiencia){
+		rexperiencias.save(experiencia);
+	}
+	
+	public void borrarItem(Long id){
+		rexperiencias.deleteById(id);
+	}
+	
+	public void modificarItem(Experiencias experiencia){
 		rexperiencias.save(experiencia);
 	}
 }
